@@ -1,0 +1,13 @@
+{
+  "scripts": {
+   "start": "node cordova.js"
+  },
+  "name": "Start on Heroku: PHP",
+  "description": "A barebones PHP app that makes use of the Silex web framework",
+  "repository": "https://github.com/MicaelaNoblia/LosPlatanos",
+  "addons": [],
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.11.1"
+   }
+}
