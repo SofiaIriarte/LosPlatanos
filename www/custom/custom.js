@@ -392,126 +392,107 @@ function linksForInAppBrowser(pageId){
 	});
 }
 
-/*function user() {
-	const mongoose = require('mongoose');
-	const bcrypt = require('bcrypt');
-
-	const saltRounds = 10;
-
-
-	const UserSchema = new mongoose.Schema({
-		nombreHuesped: { type: String, required: true, unique: true },
-		passwordHuesped: { type: String, required: true },
-		habitacionHuesped: { type: String, required: false, unique: true}
-	});
-
-	UserSchema.pre('save', function (next) {
-		if (this.isNew || this.isModified('passwordHuesped')) {
-			const document = this;
-
-			bcrypt.hash(document.passwordHuesped, saltRounds, (err, hashedPassword) => {
-				if (err) {
-					next(err);
-				} else {
-					document.passwordHuesped = hashedPassword;
-					next();
-				}
-
-			});
-		} else {
-			next();
-		}
-	});
-
-	UserSchema.methods.isCorrectPassword = function (passwordHuesped, callback) {
-		bcrypt.compare(passwordHuesped, this.passwordHuesped, function (err, same) {
-			if (err) {
-				callback(err);
-			} else {
-				callback(err, same);
-			}
-		});
-	}
-
-	module.exports = mongoose.model('User', UserSchema);
-
-
+/*MONGODB
+{
+	"_id": "2314245",
+	"id": 1,
+	"tags": [
+		"Deployment"
+	],
+	"name": "Hola",
+	"description": "wwqefw",
+	"author": "wdqefw",
+	"size": [
+		"width": "2in",
+		"heigth": "2in"
+	],
+	"image": "/s/s/s.png"
 }
 
-function app() {
-	const express = require('express');
-	const path = require('path');
-	const bodyParser = require('body-parser');
-	const app = express();
+{
+	"id": 1,
+	"name": "User",
+	"description": "wwqefw",
+	"content":[
+		"userName": string,
+		"email": string,
+		"password": string
+	]
+}
+{
+	"id": 2,
+	"name": "Huesped",
+	"description": "wwqefw",
+	"content":[
+		"room": string,
+		"score": int
+	]
+}
+{
+	"id": 3,
+	"name": "Admin",
+	"description": "wwqefw",
+	"content":[
+		
+	]
+}
+{
+	"id": 4,
+	"name": "Q&A",
+	"description": "wwqefw",
+	"content":[
+		"question": [string],
+		"answer": [string]
+	]
+}
+{
+	"id": 5,
+	"name": "Avistamiento",
+	"description": "wwqefw",
+	"content":[
+		"category": string,
+		"name": string,
+		"description": string,
+		"img": "/f/f"
+	]
+}
+{
+	"id": 6,
+	"name": "Actividades",
+	"description": "wwqefw",
+	"content":[
+		"name": string
+	]
+}
+{
+	"id": 7,
+	"name": "Senderos",
+	"description": "wwqefw",
+	"content":[
+		"number": int,
+		"map": string,
+		"QR": string
+	]
+}
+{
+	"id": 8,
+	"name": "Mapa Interactivo",
+	"description": "wwqefw",
+	"content":[
+		"number": string,
+		"description": string,
+		"QR": string
+	]
+}
+{
+	"id": 9,
+	"name": "Chat",
+	"description": "wwqefw",
+	"content":[
+		"quetion": [string],
+		"answer": [string]
+	]
+}
 
-	const bcrypt = require('bcrypt');
-	const mongoose = require('mongoose');
-	const User = requiere('./user');
 
-	app.use(bodyParser.json());
-	app.use(bodyParser.urlencoded({ extended: false }));
-
-	app.use(express.static(path.join(_dirname, 'public')));
-
-	var MongoClient = require('mongodb').MongoClient;
-	const mongo_url = 'mongodb://localhost:27017/mydb';
-
-	MongoClient.connect(url, function(err, db) {
-		if (err) throw err;
-			console.log("Database created!");
-			db.close();
-		});
-
-	mongoose.connect(mongo_url, function (err) {
-		if (err) {
-			throw err;
-		} else {
-			console.log('Successfully connected to ${mongo_url}');
-		}
-	});
-
-	app.post('/register', (req, res) => {
-		const { nombreHuesped, passwordHuesped, habitacionHuesped } = req.body;
-
-		const user = new user({ nombreHuesped, passwordHuesped, habitacionHuesped });
-
-		user.save(err => {
-			if (err) {
-				res.status(500).send('Error al registrar usuario');
-			} else {
-				res.status(200).send('Usuario registrado');
-			}
-		});
-	});
-	app.post('/authenticate', (req, res) => {
-		const { nombreHuesped, passwordHuesped, habitacionHuesped } = req.body;
-
-		User.findOne({ nombreHuesped }, (err, user) => {
-			if (err) {
-				res.status(500).send('Error al autenticar usuario');
-			} else if (!user) {
-				res.status(500).send('El usuario no existe')
-			} else {
-				user.isCorrectPassword(passwordHuesped, (err, result) => {
-					if (err) {
-						res.status(500).send('Error al autenticar');
-					} else if (result) {
-						res.status(200).send('Usuario autenticado correctamente');
-					} else {
-						res.status(500).send('Usuario y/o Contraseña incorrecto');
-						console.log('...')
-					}
-				});
-			}
-		});
-	});
-
-	//app.get('/', (req,res) => {
-
-	//});
-
-	app.listen(3000, () => {
-		console.log('server started');
-	})
-	module.exports = app;
-}*/
+*/
