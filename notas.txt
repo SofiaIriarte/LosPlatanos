@@ -1,0 +1,12 @@
+Footer Inicio, Diversion->Actividades
+Boton < en Chat
+Boton Iniciar sesion a Home
+Boton de back luego de leer la reglas de la casa (al registrarse) deberia ir a Home
+
+Cambie class select en Perfil por myselect
+
+BDD
+title->nombreHuesped + index: { unique: true }
+author->habitacionHuesped
+isbn->contraseñaHuesped
+imagePath->delete

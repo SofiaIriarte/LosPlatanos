@@ -1,5 +1,9 @@
 //All ready!. Page &  Cordova loaded.
 //Todo listo!. Página & Cordova cargados.
+
+//import index from "./bdd/index.js";
+
+
 function deviceReady() {
 	
 	try {
@@ -388,7 +392,7 @@ function linksForInAppBrowser(pageId){
 	});
 }
 
-function user() {
+/*function user() {
 	const mongoose = require('mongoose');
 	const bcrypt = require('bcrypt');
 
@@ -510,4 +514,4 @@ function app() {
 		console.log('server started');
 	})
 	module.exports = app;
-}
+}*/

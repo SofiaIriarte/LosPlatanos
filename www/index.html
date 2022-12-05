@@ -13,6 +13,11 @@
 
 	<link rel="stylesheet" href="mobileui/mui.min.css" type="text/css">
     <link rel="stylesheet" href="custom/custom.css" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100&family=Amita&family=Dancing+Script:wght@600&family=Ms+Madi&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
 
     <script src="cordova.js"></script>	
  	<!--<script src="vendors/fastclick.min.js" type="text/javascript"></script>-->    	 	
@@ -45,12 +50,11 @@
 					</div>
 					<div class="mui-page-body mui-scrollable" id="home-body">
 						<div> <!-- important for scroll! -->
-							<div class="subtitle-band">Bienvenidos a nuesta App!</div>
-							<h1>Los Platanos</h1>
+							<div class='mui-page-title'>Los Platanos</div>
 							<ul id='demos' class='mui-list mui-list-disclosure'>
-								<li><a href="#" id='gocontent'>Ingresar a la App</a></li>
-								<li><a href="https://www.estancialosplatanos.com/"  target="_blank">Visitar la web</a></li>
-								<li><a href="https://booking.avirato.com/?code=62388982"  target="_blank">Reservar</a></li>
+								<li><a class="my-button1" href="#" id='gocontent'>INGRESAR</a></li>
+								<li><a  class="my-button1" href="https://www.estancialosplatanos.com/"  target="_blank">VISITAR LA WEB</a></li>
+								<li><a class="my-button1" href="https://booking.avirato.com/?code=62388982"  target="_blank">RESERVAR</a></li>
 							</ul>
 						</div>
 					</div>
@@ -61,11 +65,12 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--	<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
+							<h3>Registrarse</h3>
 							<ul id='demos' class='mui-list' action="/authenticate" method="POST">
 								<li> Nombre: <input class="my-input" id="nombreHuesped" required type="text" name="nombreHuesped"></input> </li>
 								<li> Contraseña: <input  class="my-input" class="my-input" id="passwordHueseped" required type= "password" name="passwordHueseped"></input> </li>
@@ -75,8 +80,8 @@
 									<option value="LosOmbues">Los Ombues</option>
 									<option value="LaPindo">La Pindo y Los Mataojos</option>
 								  </select> </li>
-								  <li> <input  class="my-button" type="submit" value="Registrarme" id="goiniciohuesped"></li>
-								  <li>Si ya tienes una cuenta <button class="my-button" id='goingresar'>Ingresa aqui</button></li>
+								<li> <input  class="my-button1" type="submit" value="Registrarme" id="goiniciohuesped"></li>
+								<li>Si ya tienes una cuenta <button class="my-button" id='goingresar'>Ingresa aqui</button></li>
 							</ul>
 						</div>
 					</div>
@@ -86,15 +91,16 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--	<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
+							<h3>Ingresar</h3>
 							<ul id='demos' class='mui-list'>
 								<li> Nombre: <input class="my-input" id="nombreHuesped" name="nombreHuesped" required type="text" ></input> </li>
 								<li> Contraseña: <input class="my-input" id="passwordHueseped" name="passwordHueseped" required type= "password" ></input> </li>
-								  <li> <input  class="my-button" type="submit" value="Ingresar" id='goiniciohuesped'></li>
+								<li> <input class="my-button" type="submit" value="Ingresar" id="goiniciohuesped"></li>
 							</ul>
 						</div>
 					</div>
@@ -104,7 +110,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -119,13 +125,14 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
 							<h3>Reglas de la casa</h3>
 							<p>Hola! Bienvenido a los platanos. Para el bienestar de todos, hemos establecido algunas reglas y consejos</p>
+							<div>Aca va a ir la caja con las reglas</div>
 						</div>
 					</div>
 				</div>
@@ -135,7 +142,7 @@
 					<div class="mui-page-header">
 						<!--<a class="mui-backarrow" href="#"></a>  -->
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -143,9 +150,9 @@
 							<h3>Diversion</h3>
 							<p>Aqui encontraras juegos, para que no te aburras!</p>
 							<p>Cada 50 puntos acumulados, podras canjear una sorpresa</p>
-							<button id="gopreguntas" class="my-button1">Preguntas y Respuestas</button>
-							<button id="goavistamientos" class="my-button1">Avistamientos</button>
-							<button id="goactividades" class="my-button1">Actividades</button>
+							<button id="gopreguntas" class="my-button1">PREGUNTAS Y RESPUESTAS</button>
+							<button id="goavistamientos" class="my-button1">AVISTAMIENTOS</button>
+							<button id="goactividades" class="my-button1">ACTIVIDADES</button>
 						</div>
 					</div>
 				</div>
@@ -154,13 +161,24 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
 							<h3>Preguntas y Respuestas</h3>
 							<p>Bienvenidos! Vamos a descubrir que tanto saben sobre Los Platanos</p>
+
+
+							<div class="caja-preguntas"> 
+							
+								<p class="p1">Texto de la pregunta</p>
+
+								<button class="my-button3">Respuesta 1</button>
+								<button class="my-button3">Respuesta 2</button>   <!--HAY QUE VER COMO HACER ESTO DINAMICO -->
+								<button class="my-button3">Respuesta 3</button>
+
+							</div>
 			
 						</div>
 					</div>
@@ -171,16 +189,16 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
 							<h3>Avistamientos</h3>
 							<p>Primero debes decirnos que quieres buscar:</p>
-							<button id="goaves" class="my-button1">Aves</button>
-							<button id="goflora" class="my-button1">Flora</button>
-							<button id="gofauna" class="my-button1">Fauna</button>
+							<button id="goaves" class="my-button1">AVES</button>
+							<button id="goflora" class="my-button1">FLORA</button>
+							<button id="gofauna" class="my-button1">FAUNA</button>
 						</div>
 					</div>
 				</div>
@@ -190,13 +208,38 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
 							<h3>Aves</h3>
 							<p>Busquemos aves!</p>
+
+							<div>
+								<table>     <!--HAY QUE VER COMO HACER LA TABLA DINAMICA, PERO SERIA ASI PARA CADA PAJARITO-->
+									<thead>
+									  <tr>
+										<td colspan="5" rowspan="7"><img src="custom/images/cantos-del-cardenal_icon_android.png"></td>
+										<td colspan="10" rowspan="2"><h3>Cardenal</h3></td>
+									  </tr>
+									  <tr>
+									  </tr>
+									  <tr>
+										<td colspan="8" rowspan="5"><p>La cardenilla crestada​, también denominado cardenal común, cardenal copete rojo, o simplemente cardenal, ​ es una especie de ave paseriforme de la familia Thraupidae, perteneciente al género Paroaria. Es nativa de la parte norte y central del Cono Sur</p></td>
+										<td colspan="2" rowspan="5">Checkbox aca</td>
+									  </tr>
+									  <tr>
+									  </tr>
+									  <tr>
+									  </tr>
+									  <tr>
+									  </tr>
+									  <tr>
+									  </tr>
+									</thead>
+									</table>
+							</div>
 							
 						</div>
 					</div>
@@ -207,7 +250,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -224,7 +267,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -240,15 +283,15 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
 							<h3>Recorrer</h3>
 							<p>Aburrido de estar adentro? Salgamos a conocer los alrededores</p>
-							<button id="gosenderos" class="my-button1">Senderos</button>
-							<button id="gomapa" class="my-button1">Mapa Interactivo</button>
+							<button id="gosenderos" class="my-button1">SENDEROS</button>
+							<button id="gomapa" class="my-button1">MAPA INTERACTIVO</button>
 						</div>
 					</div>
 				</div>
@@ -257,15 +300,15 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
 						<div class='mui-page-body-content'>
 							<h3>Senderos Autoguiados</h3>
 							<p>Queres conocer nuestro campo? Elegi un sendero y comencemos</p>
-							<button id="gosendero1" class="my-button1">Sendero 1</button>
-							<button id="gosendero2" class="my-button1">Sendero 2</button>
+							<button id="gosendero1" class="my-button1">SENDERO 1</button>
+							<button id="gosendero2" class="my-button1">SENDERO 2</button>
 						</div>
 					</div>
 				</div>
@@ -274,7 +317,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -289,7 +332,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -304,7 +347,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -322,7 +365,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -339,7 +382,7 @@
 					<div class="mui-page-header">
 						<a class="mui-backarrow" href="#"></a>
 						<a class="mui-headsalir" href="" id="gohome">Salir</a>
-						<div class='mui-page-title'>Content Sample</div>
+						<div class='mui-page-title'></div>
 						<!--<a class="mui-headmenu" href="#"></a> -->
 					</div>
 					<div class="mui-page-body mui-scrollable" id="second-body">
@@ -349,7 +392,7 @@
 							<ul id='demos' class='mui-list'>
 								<li> Nombre: <input class="my-input" id="nombreHuesped"  type="text" ></input> </li>
 								<li> Contraseña: <input class="my-input"  id="passwordHueseped"  type= "password" ></input> </li>
-								<li> Habitacion: <select  class="select" id="habitacionHuesped" >
+								<li> Habitacion: <select  class="my-select" id="habitacionHuesped" >
 									<option value="" selected disabled>Seleccione su Habitacion</option>
 									<option value="ElCeibo">El Ceibo</option>
 									<option value="LosOmbues">Los Ombues</option>
