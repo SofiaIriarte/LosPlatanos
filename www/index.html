@@ -74,13 +74,14 @@
 							<ul id='demos' class='mui-list' action="/authenticate" method="POST">
 								<li> Nombre: <input class="my-input" id="nombreHuesped" required type="text" name="nombreHuesped"></input> </li>
 								<li> Contraseña: <input  class="my-input" class="my-input" id="passwordHueseped" required type= "password" name="passwordHueseped"></input> </li>
+								<li> Habitacion: <input  class="my-input" class="my-input" id="roomHueseped" required type= "text" name="roomHueseped"></input> </li>
 								<li> Habitacion: <select class="my-select" id="habitacionHuesped" name="habitacionHuesped" required>
 									<option value="" selected disabled>Seleccione su Habitacion</option>
 									<option value="ElCeibo">El Ceibo</option>
 									<option value="LosOmbues">Los Ombues</option>
 									<option value="LaPindo">La Pindo y Los Mataojos</option>
 								  </select> </li>
-								<li> <input  class="my-button1" type="submit" value="Registrarme" id="goiniciohuesped"></li>
+								<li> <input  class="my-button1" type="submit" value="Registrarme" id="goiniciohuesped" onclick="getData()"></li>
 								<li>Si ya tienes una cuenta <button class="my-button" id='goingresar'>Ingresa aqui</button></li>
 							</ul>
 						</div>

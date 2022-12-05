@@ -407,92 +407,99 @@ function linksForInAppBrowser(pageId){
 		"heigth": "2in"
 	],
 	"image": "/s/s/s.png"
+}*/
+
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const UserSchema = Schema({
+	name: String,
+	email: String,
+	password: String,
+})
+
+const HuespedSchema = Schema({
+	user: Object,
+	score: Number,
+	room: {type: String, enum: ['El Ceibo', 'Los Ombues', 'La Pindo y Los Mataojos']}
+})
+
+const AvistamientoSchema = Schema({
+	category: String,
+	name: String,
+	description: String,
+	img: String
+})
+
+const ActividadesSchema = Schema({
+	name: String,
+})
+
+const SenderoSchema = Schema({
+	name: String,
+	map: String,
+	QR: String,
+})
+
+const MapSchema = Schema({
+	name: String,
+	description: String,
+	QR: String,
+})
+
+const ChatSchema = Schema({
+	user: Object,
+	questions: {type: String, enum: ['El Ceibo', 'Los Ombues', 'La Pindo y Los Mataojos']},
+	answers: {type: String, enum: ['El Ceibo', 'Los Ombues', 'La Pindo y Los Mataojos']}
+})
+
+mongoose.model('User', UserSchema)
+mongoose.model('Huesped', HuespedSchema)
+mongoose.model('Avistamiento', AvistamientoSchema)
+monggose.model('Actividades', ActividadesSchema)
+mongoose.model('Senderos', SenderosSchema)
+mongoose.model('MapaInteractivo', MapaSchema)
+mongoose.model('Chat', ChatSchema)
+
+JS
+
+const User = require('./models/User')
+const Huesped = require('./models/Huesped')
+const Avistamiento = require('./models/Avistamiento')
+const Actividades = require('./models/Actividades')
+const Senderos = require('./models/Senderos')
+const MapaInteractivo = require('./models/MapaInteractivo')
+const Chat = require('./models/Chat')
+
+
+function getData()
+{
+	var name = document.getElementById('nombreHuesped').value;
+	var password = document.getElementById('passwordHuesped').value;
+	var room = document.getElementById('roomHuesped').value;
+
+	document.registre.name.value = name;
+	document.registre.pass.value = password;
+	document.registre.room.value = room;
 }
 
-{
-	"id": 1,
-	"name": "User",
-	"description": "wwqefw",
-	"content":[
-		"userName": string,
-		"email": string,
-		"password": string
-	]
-}
-{
-	"id": 2,
-	"name": "Huesped",
-	"description": "wwqefw",
-	"content":[
-		"room": string,
-		"score": int
-	]
-}
-{
-	"id": 3,
-	"name": "Admin",
-	"description": "wwqefw",
-	"content":[
-		
-	]
-}
-{
-	"id": 4,
-	"name": "Q&A",
-	"description": "wwqefw",
-	"content":[
-		"question": [string],
-		"answer": [string]
-	]
-}
-{
-	"id": 5,
-	"name": "Avistamiento",
-	"description": "wwqefw",
-	"content":[
-		"category": string,
-		"name": string,
-		"description": string,
-		"img": "/f/f"
-	]
-}
-{
-	"id": 6,
-	"name": "Actividades",
-	"description": "wwqefw",
-	"content":[
-		"name": string
-	]
-}
-{
-	"id": 7,
-	"name": "Senderos",
-	"description": "wwqefw",
-	"content":[
-		"number": int,
-		"map": string,
-		"QR": string
-	]
-}
-{
-	"id": 8,
-	"name": "Mapa Interactivo",
-	"description": "wwqefw",
-	"content":[
-		"number": string,
-		"description": string,
-		"QR": string
-	]
-}
-{
-	"id": 9,
-	"name": "Chat",
-	"description": "wwqefw",
-	"content":[
-		"quetion": [string],
-		"answer": [string]
-	]
-}
+
+/*VUE
+
+vm = new Vue ({
+	el: '#vue-app’,
+	data: {
+		message: 'Hello Vue.js!'
+	},
+	methods: {
+		myMetodo: function() {}
+	},
+	computed: {
+		miVarComputed: function() {}
+	},
+	mounted: function() {
+	}
+});
 
 
 */
